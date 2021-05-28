@@ -21,6 +21,16 @@ export default {
 		],
 	},
 
+	generate: {
+		async routes() {
+			const { $content } = require('@nuxt/content');
+
+			let posts = await $content('posts').only(['slug']).fetch();
+
+			return posts.map(post => `/blog/post/${ post.slug  }`);
+		},
+	},
+
 	css: [],
 
 	plugins: [],
@@ -85,8 +95,6 @@ export default {
 				}
 
 				let url = `https://www.woubuc.be/blog/post/${ post.slug }`;
-
-				console.log(post);
 
 				feed.addItem({
 					id: url,
