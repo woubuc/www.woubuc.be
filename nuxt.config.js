@@ -36,14 +36,6 @@ export default {
 		'@nuxtjs/sitemap',
 	],
 
-	build: {
-		postcss: {
-			plugins: {
-				'autoprefixer': {},
-			}
-		}
-	},
-
 	content: {
 		liveEdit: false,
 		markdown: {
@@ -118,7 +110,14 @@ export default {
 
 			let posts = await $content('posts').sortBy('date', 'desc').fetch();
 
-			return posts.map(post => `blog/post/${ post.slug }`);
+			let tags = posts
+				.flatMap(post => post.tagsLower)
+				.filter((tag, i, tags) => tags.indexOf(tag) === i);
+
+			return [
+				...posts.map(post => `blog/post/${ post.slug }`),
+				...tags.map(tag => `blog/tag/${ tag }`),
+			];
 		},
 	},
 };
