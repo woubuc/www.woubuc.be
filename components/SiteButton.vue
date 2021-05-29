@@ -12,7 +12,7 @@ import { Colour } from '../utils/colours';
 export default class SiteButton extends Vue {
 
 	@Prop({ required: true }) public readonly to: Record<string, any> | string;
-	@Prop({ required: true }) public readonly colour: Colour;
+	@Prop({ default: '' }) public readonly colour: Colour;
 
 }
 </script>
