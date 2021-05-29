@@ -14,6 +14,7 @@ tags:
 - GDscript
 - Autoload
 - Tutorial
+- Beginner
 ---
 
 There are multiple ways to play and manage music tracks for your game but most are linked to your scene. In this tutorial we'll make an autoload music manager that will allow to you play background music independent from your game scenes.
