@@ -1,6 +1,5 @@
 export default {
 	target: 'static',
-	ssr: false,
 
 	env: {},
 
@@ -9,7 +8,7 @@ export default {
 		meta: [
 			{ charset: 'utf-8' },
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
-			{ hid: 'description', name: 'description', content: 'Where I write about programming, tech and stuff.' },
+			{ name: 'description', content: 'Where I write about programming, tech and stuff.' },
 		],
 		link: [
 			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -19,16 +18,6 @@ export default {
 			},
 			{ rel: 'alternate', type: 'application/rss+xml', title: '@woubuc', href: 'https://www.woubuc.be/rss.xml' },
 		],
-	},
-
-	generate: {
-		async routes() {
-			const { $content } = require('@nuxt/content');
-
-			let posts = await $content('posts').only(['slug']).fetch();
-
-			return posts.map(post => `/blog/post/${ post.slug  }`);
-		},
 	},
 
 	css: [],
@@ -47,10 +36,12 @@ export default {
 		'@nuxtjs/sitemap',
 	],
 
-	build: {},
-
-	tailwindcss: {
-		jit: true,
+	build: {
+		postcss: {
+			plugins: {
+				'autoprefixer': {},
+			}
+		}
 	},
 
 	content: {
@@ -122,7 +113,6 @@ export default {
 
 	sitemap: {
 		hostname: 'https://www.woubuc.be',
-		gzip: true,
 		async routes() {
 			const { $content } = require('@nuxt/content');
 
