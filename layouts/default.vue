@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="flex flex-col min-h-screen">
 		<header class="p-6 md:px-12 md:py-10">
 			<div class="max-w-screen-md mx-auto flex items-center justify-between">
 				<nuxt-link :to="{ name: 'index' }" class="font-title font-semibold text-gray-800 no-underline">
@@ -12,7 +12,7 @@
 			</div>
 		</header>
 
-		<div class="px-6 md:px-12">
+		<div class="flex-grow px-6 md:px-12">
 			<div class="max-w-screen-md mx-auto">
 				<nuxt />
 			</div>
