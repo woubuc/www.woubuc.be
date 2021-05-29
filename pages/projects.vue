@@ -5,16 +5,21 @@
 </template>
 
 <script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator';
 import { IContentDocument } from '@nuxt/content/types/content';
 import { Context } from '@nuxt/types';
-import { Component, Vue } from 'nuxt-property-decorator';
-import ContentList from '../components/ContentList.vue';
-import Post from '../models/Post';
-import Project from '../models/Project';
+
+import Project from '~/models/Project';
+
+import ContentList from '~/components/ContentList.vue';
 
 @Component({
 	name: 'ProjectsPage',
 	components: { ContentList },
+
+	head: {
+		title: 'Projects - @woubuc',
+	},
 })
 export default class ProjectsPage extends Vue {
 

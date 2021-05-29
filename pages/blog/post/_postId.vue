@@ -29,9 +29,9 @@
 </template>
 
 <script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator';
 import { IContentDocument } from '@nuxt/content/types/content';
 import { Context } from '@nuxt/types';
-import { Component, Vue } from 'nuxt-property-decorator';
 
 import BodyText from '~/components/BodyText.vue';
 import DateLabel from '~/components/DateLabel.vue';

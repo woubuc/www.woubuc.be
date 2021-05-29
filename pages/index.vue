@@ -12,13 +12,14 @@
 </template>
 
 <script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator';
 import { IContentDocument } from '@nuxt/content/types/content';
 import { Context } from '@nuxt/types';
-import { Component, Vue } from 'nuxt-property-decorator';
+
 import ContentList from '~/components/ContentList.vue';
 import PageIntroBlock from '~/components/PageIntroBlock.vue';
-import IndexPageIntro from '../components/IndexPageIntro.vue';
-import SiteButton from '../components/SiteButton.vue';
+import IndexPageIntro from '~/components/IndexPageIntro.vue';
+import SiteButton from '~/components/SiteButton.vue';
 
 @Component({
 	name: 'IndexPage',

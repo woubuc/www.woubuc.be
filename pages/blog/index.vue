@@ -3,17 +3,21 @@
 </template>
 
 <script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator';
 import { IContentDocument } from '@nuxt/content/types/content';
 import { Context } from '@nuxt/types';
-import { Component, Vue } from 'nuxt-property-decorator';
+
+import Post from '~/models/Post';
 
 import ContentList from '~/components/ContentList.vue';
-import Post from '~/models/Post';
 
 @Component({
 	name: 'BlogPage',
 	components: { ContentList },
-	watchQuery: ['tag']
+
+	head: {
+		title: 'Blog - @woubuc',
+	},
 })
 export default class BlogPage extends Vue {
 
