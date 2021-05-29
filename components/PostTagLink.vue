@@ -17,8 +17,8 @@ export default class PostTagLink extends Vue {
 
 	get to(): Record<string, any> {
 		return {
-			name: 'blog',
-			query: { tag: this.tag.toLowerCase() },
+			name: 'blog-tag-tag',
+			params: { tag: this.tag.toLowerCase() },
 		};
 	}
 }
