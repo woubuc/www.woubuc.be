@@ -1,0 +1,2 @@
+http://test-blog.woubuc.be/*  https://www.woubuc.be/blog/:splat  301!
+https://test-blog.woubuc.be/*  https://www.woubuc.be/blog/:splat  301!
