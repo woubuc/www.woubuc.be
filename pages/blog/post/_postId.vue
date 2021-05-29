@@ -32,27 +32,31 @@
 import { IContentDocument } from '@nuxt/content/types/content';
 import { Context } from '@nuxt/types';
 import { Component, Vue } from 'nuxt-property-decorator';
-import PostTagLink from '~/components/PostTagLink.vue';
-import PostCommentLink from '~/components/PostTagLink.vue';
-import PostScrollProgress from '~/components/PostScrollProgress.vue';
-import SiteButton from '~/components/SiteButton.vue';
 
-import Post from '~/models/Post';
 import BodyText from '~/components/BodyText.vue';
 import DateLabel from '~/components/DateLabel.vue';
 import PageIntroBlock from '~/components/PageIntroBlock.vue';
+import PostScrollProgress from '~/components/PostScrollProgress.vue';
+import PostTagLink from '~/components/PostTagLink.vue';
+import PostCommentLink from '~/components/PostTagLink.vue';
+import SiteButton from '~/components/SiteButton.vue';
+
+import Post from '~/models/Post';
 
 @Component({
 	name: 'PostPage',
 	components: { PostTagLink, PostScrollProgress, SiteButton, PostCommentLink, BodyText, DateLabel, PageIntroBlock },
+})
+export default class PostPage extends Vue {
 
 	head() {
 		let postUrl = `https://www.woubuc.be/blog/post/${ this.post.slug }`;
-		return {
-			meta: [
-				{ property: 'og:site_name', content: '@woubuc' },
 
+		return {
+			title: `${ this.post.title } - @woubuc`,
+			meta: [
 				{ property: 'og:type', content: 'article' },
+				{ property: 'og:site_name', content: '@woubuc' },
 				{ property: 'og:title', content: this.post.title },
 				{ property: 'og:description', content: this.post.description },
 				{ property: 'og:url', content: postUrl },
@@ -68,14 +72,15 @@ import PageIntroBlock from '~/components/PageIntroBlock.vue';
 				{ name: 'twitter:label1', content: 'Tagged' },
 				{ name: 'twitter:data1', content: this.post.tags.join(', ') },
 			],
+			link: [
+				{ rel: 'canonical', href: postUrl },
+			],
 		};
-	},
-})
-export default class PostPage extends Vue {
+	}
 
-	private post : IContentDocument & Post;
+	private post: IContentDocument & Post;
 
-	async asyncData({ $content, params } : Context & Vue) : Promise<Record<string, any>> {
+	async asyncData({ $content, params }: Context & Vue): Promise<Record<string, any>> {
 		let slug = params.postId;
 
 		let post = await $content('posts', slug).fetch();
