@@ -1,5 +1,6 @@
 export default {
 	target: 'static',
+	modern: true,
 
 	env: {},
 
@@ -43,6 +44,10 @@ export default {
 		'@nuxtjs/feed',
 		'@nuxtjs/sitemap',
 	],
+
+	render: {
+		asyncScripts: true,
+	},
 
 	content: {
 		liveEdit: false,
