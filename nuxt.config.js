@@ -10,6 +10,8 @@ export default {
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
 			{ name: 'description', content: 'Where I write about programming, tech and stuff.' },
 			{ name: 'monetization', content: '$ilp.uphold.com/9YjGeW4zW7pF' },
+			{ name: 'msapplication-TileColor', content: '#eff4ff' },
+			{ name: 'theme-color', content: '#ffffff' },
 		],
 		link: [
 			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -18,6 +20,11 @@ export default {
 				href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&display=swap',
 			},
 			{ rel: 'alternate', type: 'application/rss+xml', title: '@woubuc', href: 'https://www.woubuc.be/rss.xml' },
+
+			{ rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+			{ rel: 'icon', sizes: '32x32', href: '/favicon-32x32.png' },
+			{ rel: 'icon', sizes: '16x16', href: '/favicon-16x16.png' },
+			{ rel: 'manifest', href: '/site.webmanifest' },
 		],
 	},
 
