@@ -23,7 +23,7 @@
 		<footer class="pt-16 pb-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-500">
 			<span>&copy; {{ new Date().getFullYear() }} Wouter Buckens</span>
 			<a href="mailto:hi@woubuc.be" class="underline hover:text-black focus:text-black">hi@woubuc.be</a>
-			<span>🍪 I don't track you</span>
+			<span>🍪 No tracking cookies here</span>
 		</footer>
 	</div>
 </template>
