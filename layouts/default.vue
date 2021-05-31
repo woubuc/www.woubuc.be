@@ -1,5 +1,7 @@
 <template>
 	<div class="flex flex-col min-h-screen">
+		<img class="absolute top-0 left-0 pointer-events-none opacity-0" :src="`https://ping-api.woubuc.be/ingest.png?i=${ trackId }`" referrerpolicy="unsafe-url" aria-hidden="true" />
+
 		<header class="p-6 md:px-12 md:py-10">
 			<div class="max-w-screen-md mx-auto flex items-center justify-between">
 				<nuxt-link :to="{ name: 'index' }" class="font-title font-semibold text-gray-800 no-underline">
@@ -27,7 +29,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator';
+import { Component, Vue, Watch } from 'nuxt-property-decorator';
 
 @Component({
 	name: 'DefaultLayout',
@@ -35,6 +37,12 @@ import { Component, Vue } from 'nuxt-property-decorator';
 })
 export default class DefaultLayout extends Vue {
 
+	trackId: number = 1;
+
+	@Watch('$route')
+	onRouteChange() {
+		this.trackId++;
+	}
 }
 </script>
 
