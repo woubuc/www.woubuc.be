@@ -1,6 +1,5 @@
 export default {
 	target: 'static',
-	modern: true,
 
 	env: {},
 
@@ -51,6 +50,7 @@ export default {
 
 	render: {
 		asyncScripts: true,
+		injectScripts: false,
 	},
 
 	content: {

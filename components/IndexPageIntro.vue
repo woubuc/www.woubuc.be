@@ -1,6 +1,6 @@
 <template>
 	<page-intro-block colour="green">
-		<div class="space-y-4 leading-7">
+		<div class="IndexPageIntro space-y-4 leading-7">
 			<div class="flex">
 				<span class="flex-none w-7">👋</span>
 				<p class="flex-grow">Hi, I'm <strong>Wouter</strong>. I build applications and web things using <strong>Rust</strong>, <strong>Typescript</strong>, and <strong>C#</strong>. I love designing and creating <strong>user interfaces</strong>, building <strong>REST APIs</strong>, and <strong>developing products</strong> to make them better than ever, as well as <strong>writing</strong> technical documentation and blog articles.</p>
@@ -37,8 +37,8 @@ export default class IndexPageIntro extends Vue {
 }
 </script>
 
-<style scoped>
-p > a {
+<style>
+.IndexPageIntro p > a {
 	@apply px-1.5 py-0.5 -mx-1.5 -my-0.5 text-green-800 underline font-semibold
 		hover:text-black hover:no-underline focus-visible:text-black focus-visible:no-underline
 		focus-visible:ring-2 focus-visible:rounded focus-visible:outline-none ring-green-400;

@@ -6,6 +6,7 @@ html {
 	margin-left: calc(100vw - 100%);
 	font-size: 17px;
 }
+
 html, body {
 	min-height: 100%;
 }
@@ -24,5 +25,5 @@ strong {
 
 a {
 	@apply px-1.5 -mx-1.5 py-px -my-px
-		focus-visible:text-black focus-visible:no-underline focus-visible:ring-2 focus-visible:rounded focus-visible:outline-none ring-cyan-500;
+	focus-visible:text-black focus-visible:no-underline focus-visible:ring-2 focus-visible:rounded focus-visible:outline-none ring-cyan-500;
 }

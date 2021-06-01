@@ -32,12 +32,13 @@ export default class PostScrollProgress extends Vue {
 }
 </script>
 
-<style scoped>
+<style>
 .ScrollProgress {
-	@apply fixed top-0 left-0 w-full h-[2px];
+	@apply fixed top-0 left-0 w-full h-[2px]
 }
+
 .ScrollProgress > div {
-	@apply h-full;
+	@apply h-full
 }
 
 .ScrollProgress-red > div { @apply bg-red-500 }

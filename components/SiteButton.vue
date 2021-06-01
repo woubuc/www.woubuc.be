@@ -1,5 +1,7 @@
 <template>
-	<nuxt-link :to="to" class="SiteButton" :class="`SiteButton-${ colour }`"><slot /></nuxt-link>
+	<nuxt-link :to="to" class="SiteButton" :class="`SiteButton-${ colour }`">
+		<slot />
+	</nuxt-link>
 </template>
 
 <script lang="ts">
@@ -17,11 +19,14 @@ export default class SiteButton extends Vue {
 }
 </script>
 
-<style scoped>
+<style>
 .SiteButton {
 	@apply m-0 px-2 py-1 border-2 rounded-sm text-gray-700 font-semibold border-gray-200;
 }
-.SiteButton:hover, .SiteButton:focus { @apply bg-gray-200 border-gray-200 text-black }
+.SiteButton:hover, .SiteButton:focus {
+	@apply bg-gray-200 border-gray-200 text-black;
+}
+
 .SiteButton-red:hover, .SiteButton-red:focus { @apply text-red-900 bg-red-100 border-red-100 }
 .SiteButton-orange:hover, .SiteButton-orange:focus { @apply text-orange-900 bg-orange-100 border-orange-100 }
 .SiteButton-yellow:hover, .SiteButton-yellow:focus { @apply text-yellow-900 bg-yellow-100 border-yellow-100 }
