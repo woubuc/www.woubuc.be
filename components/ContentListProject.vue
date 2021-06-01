@@ -9,7 +9,14 @@
 		</div>
 
 		<div v-if="hasImages" class="flex flex-wrap gap-1.5 mb-4 sm:flex-nowrap">
-			<img v-for="image in project.images" :key="image" :src="image" alt="Project image" class="w-12 flex-grow h-40 object-cover object-center rounded-sm" />
+			<nuxt-img
+				v-for="image in project.images"
+				:key="image"
+				:src="image"
+				format="webp"
+				quality="90"
+				alt="Project image"
+				class="w-12 flex-grow h-40 object-cover object-center rounded-sm" />
 		</div>
 
 		<body-text :colour="project.colour" :document="project" />

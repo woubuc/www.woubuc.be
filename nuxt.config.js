@@ -36,6 +36,7 @@ export default {
 		'@nuxt/typescript-build',
 		'@nuxtjs/tailwindcss',
 		'@nuxtjs/svg',
+		'@nuxt/image',
 	],
 
 	modules: [
