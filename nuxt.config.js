@@ -45,6 +45,10 @@ export default {
 		'@nuxtjs/sitemap',
 	],
 
+	build: {
+		extractCSS: true,
+	},
+
 	render: {
 		asyncScripts: true,
 	},
