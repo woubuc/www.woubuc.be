@@ -71,6 +71,9 @@ export default class BodyText extends Vue {
 .BodyText li {
 	@apply my-1.5
 }
+.BodyText blockquote {
+	@apply sm:ml-6 sm:mr-6 pl-4 sm:pl-0 py-px border-l-4 italic text-opacity-90 bg-gray-50;
+}
 
 .BodyText p code, .BodyText li code {
 	@apply px-1 py-0.5 font-mono border rounded-sm text-sm whitespace-nowrap;
@@ -135,6 +138,7 @@ export default class BodyText extends Vue {
 
 .BodyText-green a { @apply text-green-600 hover:text-green-900 }
 .BodyText-green p code, .BodyText-green li code { @apply bg-green-100 border-green-600 text-green-900 }
+.BodyText-green blockquote { @apply border-green-300 }
 
 .BodyText-cyan a { @apply text-cyan-600 hover:text-cyan-900 }
 .BodyText-cyan p code, .BodyText-cyan li code { @apply bg-cyan-100 border-cyan-600 text-cyan-900 }
