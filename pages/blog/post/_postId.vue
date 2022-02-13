@@ -11,6 +11,10 @@
 			</div>
 		</page-intro-block>
 
+		<div v-if="!post.published" class="px-12 py-6 bg-red-50 border-2 border-red-300 rounded text-red-900 italic text-center">
+			<p>This is a draft. No part of this post is finished and information may be incorrect, unfounded and/or missing. Please do not share this page.</p>
+		</div>
+
 		<body-text :colour="post.colour" :document="post" :full-page="true" />
 
 		<div class="sm:mx-6 mt-24 mb-6 p-6 bg-gray-100 rounded-sm">
