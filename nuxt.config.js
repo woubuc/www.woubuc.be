@@ -9,7 +9,7 @@ export default {
 			{ charset: 'utf-8' },
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
 			{ name: 'description', content: 'Where I write about programming, tech and stuff.' },
-			{ name: 'monetization', content: '$ilp.uphold.com/9YjGeW4zW7pF' },
+			// { name: 'monetization', content: '$ilp.uphold.com/9YjGeW4zW7pF' },
 			{ name: 'msapplication-TileColor', content: '#eff4ff' },
 			{ name: 'theme-color', content: '#ffffff' },
 		],
